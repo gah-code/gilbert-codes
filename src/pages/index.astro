@@ -1,8 +1,56 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-const pageTitle = 'Home Page';
+const pageTitle = 'Home';
+const pageGreeting = 'Hola';
+const pageDescription = 'Gilbert';
 ---
 
-<BaseLayout pageTitle={pageTitle}>
-  <h2>My awesome blog subtitle</h2>
+<BaseLayout pageTitle={pageTitle} description={pageDescription}>
+  <section class='hero'>
+    <h1 class='title'>{pageGreeting} <br /> I'm {pageDescription}</h1>
+    <!-- <h2>Web developer from the Bay area, thanks for stopping by</h2> -->
+    <p>Surfing the world wide web for all front-end dev insight</p>
+
+    <h2>Thanks for stopping by!</h2>
+    <p class='text'>
+      During my free time, I immerse myself in the ever-evolving world of
+      front-end technology. I stay active by building my own projects, taking
+      courses to improve my web development skills, and some hack the box every
+      so often. I always keep things exciting by mixing it up!
+    </p>
+  </section>
 </BaseLayout>
+
+<style>
+  .hero {
+    padding: 4rem 1.5rem 8rem 1.5rem;
+    background-color: rgb(225, 209, 240);
+    font-weight: 700;
+    color: #333;
+    text-wrap: balance;
+
+    p {
+      font-size: 24px;
+      line-height: 1.25;
+      margin-top: 16px;
+      margin-bottom: 16px;
+    }
+
+    h2 {
+      margin-top: 128px;
+    }
+
+    .text {
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 1.7;
+      /* font-family: Roboto, Arial, Helvetica, sans-serif; */
+    }
+  }
+  .title {
+    line-height: 1.1;
+
+    font-size: 48px;
+    font-family: system-ui, sans-serif;
+  }
+</style>
